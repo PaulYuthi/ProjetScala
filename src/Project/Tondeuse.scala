@@ -1,9 +1,10 @@
 package Project
 
 // Creation de la classe Tondeuse qui traite les consignes puis renvoie les coordonnées et l'orientation des objets tondeuse
-class Tondeuse(var coord:(Int, Int),
-               var orientation:Char,
-               val max_coord:(Int, Int)){
+class Tondeuse(val max_coord:(Int, Int),
+               var coord:(Int, Int),
+               var orientation:Char
+               ){
 
   // Definir le format de sortie des coordonnees de la tondeuse
   override def toString: String = {
