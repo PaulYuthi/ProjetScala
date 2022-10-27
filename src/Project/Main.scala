@@ -33,9 +33,10 @@ object Main extends App {
     for ((position, consigne) <- position_initiale.zip(consignes)) {
       i += 1
       val tondeuse = new Tondeuse(
+        (max_coord(0).toInt, max_coord(1).toInt),
         (position(0).toInt, position(1).toInt),
-        position(2).charAt(0),
-        (max_coord(0).toInt, max_coord(1).toInt))
+        position(2).charAt(0)
+        )
 
       // Afficher le resultat final
       tondeuse.run(consigne)
